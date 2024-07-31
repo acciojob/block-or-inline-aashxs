@@ -1,117 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Block or Inline</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-<h1>Block or Inline</h1>
-<p>
-This problem statement describes how to identify whether the following elements are block or inline.
-</p>
-<p>
-To identify that, please render each element twice inside a <code>div</code>block. Make sure that you give the respective <code>element</code> the right <code>data-ns-test</code> attribute value as mentioned in the table below. Do not forget to mention the answer after you add the two elements as: “Answer: Block”.
-</p>
-<table>
-<tr>
-<th>Element</th>
-<th>data-ns-test attribute value</th>
-<th>Expected output</th>
-</tr>
-<tr>
-<td>button</td>
-<td>block-inline-button</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>div</td>
-<td>block-inline-div</td>
-<td>Block</td>
-</tr>
-<tr>
-<td>span</td>
-<td>block-inline-span</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>p</td>
-<td>block-inline-p</td>
-<td>Block</td>
-</tr>
-<tr>
-<td>input</td>
-<td>block-inline-input</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>cite</td>
-<td>block-inline-cite</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>code</td>
-<td>block-inline-code</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>h1</td>
-<td>block-inline-h1</td>
-<td>Block</td>
-</tr>
-<tr>
-<td>sup</td>
-<td>block-inline-sup</td>
-<td>Inline</td>
-</tr>
-<tr>
-<td>sub</td>
-<td>block-inline-sub</td>
-<td>Inline</td>
-</tr>
-</table>
-<p>
-The content inside the elements should be <code> Test1</code> and <code>Test2</code> .
-</p>
-<p>
-The output of the code should be the same as the expected output in the table above.
-</p>
-<h3>Example of Expected Structure for One Element Pair for button:</h3>
-
-<div>
-<button data-ns-test=“block-inline-button”>Test1</button>
-<button data-ns-test=“block-inline-button”>Test2</button>
-Answer: Inline
+  <div>
+    <button data-ns-test="block-inline-button">Test1</button>
+    <button data-ns-test="block-inline-button">Test2</button>
+    Answer: Inline
 </div>
-
-<p>NOTE: You don’t need to build the table, table is just part of the problem statement to help you explain things in an easier format.</p>
-
-<!–
-const baseUrl = “http://localhost:3000”;
-describe(“example to-do app”, () => {
-beforeEach(() => {
-cy.visit(${baseUrl}/main.html);
-});
-const elementTests = [
-{ testId: “block-inline-h1”, expectedAnswer: “Block” },
-{ testId: “block-inline-button”, expectedAnswer: “Inline” },
-{ testId: “block-inline-input”, expectedAnswer: “Inline” },
-{ testId: “block-inline-sup”, expectedAnswer: “Inline” },
-{ testId: “block-inline-p”, expectedAnswer: “Block” },
-{ testId: “block-inline-div”, expectedAnswer: “Block” },
-{ testId: “block-inline-sub”, expectedAnswer: “Inline” },
-{ testId: “block-inline-span”, expectedAnswer: “Inline” },
-{ testId: “block-inline-code”, expectedAnswer: “Inline” }
-];
-const checkElement = ({ testId, expectedAnswer }) => {
-it(Checking ${testId}, () => {
-cy.get([data-ns-test="${testId}"]).should(‘have.length’, 2)
-cy.get([data-ns-test="${testId}"]).parent().then(ans => {
-let text = ans.text().replace(‘Test1’, ‘’).replace(‘Test2’, ‘’).trim();
-expect(text).to.eq(Answer: ${expectedAnswer});
-});
-});
-};
-elementTests.forEach(checkElement);
-});
-–>
+<div>
+  <button data-ns-test="block-inline-div">Test1</button>
+  <button data-ns-test="block-inline-div">Test2</button>
+  Answer: Inline
+</div>
+  
 </body>
 </html>
